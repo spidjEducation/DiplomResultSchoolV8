@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
@@ -23,6 +23,11 @@ export default defineConfig({
 		preprocessorOptions: {
 			scss: {
 				api: 'modern-compiler',
+				additionalData: `@use "/src/shared/assets/styles/_colors.scss"  as *; 
+				@use "/src/shared/assets/styles/_functions.scss"  as *; 
+				@use "/src/shared/assets/styles/_variables.scss"  as *; 
+				@use "/src/shared/assets/styles/_mixins.scss"  as *; 
+				`, //Автоматически импорт переменных в каждый SCSS файл
 			},
 		},
 	},

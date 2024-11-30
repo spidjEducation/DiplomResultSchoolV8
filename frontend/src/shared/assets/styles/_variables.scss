@@ -1,0 +1,15 @@
+$containerPadding: 15;
+$containerWidth: 1360;
+
+$maxWidth: 1920;
+$maxWidthContainer: $containerWidth + ($containerPadding * 2);
+$minWidth: 320;
+
+$ms: $maxWidthContainer + 12;
+$xl: 1200;
+$lg: 992;
+$md: 768;
+$sm: 576;
+$xs: 576;
+
+$font-size-base: 16;
