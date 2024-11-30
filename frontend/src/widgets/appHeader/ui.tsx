@@ -1,7 +1,8 @@
-import { AppLogo } from "../appLogo";
-import { AppMenu } from "../appMenu";
-import { Container } from "../container";
-import { UserPanel } from "../userPanel";
+
+import { AppLogo } from 'shared/ui/appLogo';
+import { AppMenu } from 'shared/ui/appMenu';
+import { Container } from 'shared/ui/container';
+import { UserPanel } from 'shared/ui/userPanel';
 import classes from './styles.module.scss';
 
 export const AppHeader = () => {

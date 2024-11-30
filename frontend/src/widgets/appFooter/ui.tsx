@@ -1,4 +1,4 @@
-import { Container } from "../container";
+import { Container } from 'shared/ui/container';
 import classes from './styles.module.scss';
 export const AppFooter = () => {
     return (

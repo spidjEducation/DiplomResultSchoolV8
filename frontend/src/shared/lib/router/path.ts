@@ -6,6 +6,9 @@ export const path = {
 	login() {
 		return path.root.concat('login');
 	},
+	register() {
+		return path.root.concat('register');
+	},
 	account() {
 		return path.root.concat('account');
 	},
