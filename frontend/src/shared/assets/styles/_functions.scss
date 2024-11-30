@@ -1,22 +1,22 @@
 @use 'sass:math';
 @use './variables' as *;
 
-@function prc($pxCurrent: 0, $pxDefault: 0) {
+@function prc($pxCurrent: 0, $pxDefault: 1) {
 	$result: math.div($pxCurrent, $pxDefault) * 100%;
 	@return $result;
 }
 
-@function px($px: 0) {
+@function px($px) {
 	$result: $px + px;
 	@return $result;
 }
 
-@function rem($px: 0, $font-size: $font-size-base) {
+@function rem($px, $font-size: $font-size-base) {
 	$result: math.div($px, $font-size) + rem;
 	@return $result;
 }
 
-@function em($pxCurrent: 0, $pxDefault: 16) {
+@function em($pxCurrent, $pxDefault: $font-size-base) {
 	$result: math.div($pxCurrent, $pxDefault) + em;
 	@return $result;
 }

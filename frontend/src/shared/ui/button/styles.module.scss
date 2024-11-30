@@ -1,0 +1,52 @@
+.button {
+	position: relative;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: rem(16);
+	line-height: prc(1);
+	padding: rem(8) rem(22);
+	height: rem(40);
+	background: $color-button;
+	color: $color-button-text;
+	border-radius: rem(4);
+	transition: opacity 0.3s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	&:focus {
+		box-shadow: px(0) px(0) px(0) px(1) $color-focus;
+	}
+
+	&:disabled {
+		background: $color-button-disable;
+		box-shadow: none;
+		opacity: 1;
+		pointer-events: none;
+	}
+
+	&::after {
+		content: url('src/shared/assets/img/spinner.gif');
+		position: absolute;
+		inset: 0;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&:global(.loading) {
+		box-shadow: none;
+		&::after {
+			opacity: 0.5;
+			visibility: visible;
+		}
+	}
+}

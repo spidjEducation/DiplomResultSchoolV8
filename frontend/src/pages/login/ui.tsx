@@ -1,5 +1,5 @@
+import { LoginForm } from "features/session";
+
 export const LoginPage = () => {
-    return (
-        <div>Авторизация</div>
-    );
+    return <LoginForm />;
 };

@@ -1,9 +1,9 @@
 .footer {
-	background: $color-footer-background;
+	background: $color-bg-footer;
 	color: $color-footer;
 	border-top: 1px solid $color-border;
-	box-shadow: 0px 0px 10px 4px $color-border;
-	padding: 30px 0px;
+	box-shadow: px(0) px(0) px(10) px(4) $color-shadow;
+	padding: px(30) px(0);
 }
 
 .container {

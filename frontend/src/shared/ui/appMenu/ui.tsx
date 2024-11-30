@@ -1,21 +1,8 @@
-import cn from 'classnames';
+import { LogoutButton } from 'features/session';
 import { NavLink } from 'react-router-dom';
 import { path } from 'shared/lib/router';
-import { Icons } from 'shared/types';
-import { Icon } from 'shared/ui/icon';
 import classes from './styles.module.scss';
 
-const LogoutButton = () => {
-    const logoutHandler = () => {
-        console.log('Выход')
-    };
-
-    return (
-        <button className={cn(classes.button)} onClick={logoutHandler}>
-            <Icon className={classes.icon} name={Icons.exit} />
-        </button>
-    );
-}
 export const AppMenu = () => {
     return (
         <nav className={classes.menu}>

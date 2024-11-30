@@ -1,5 +1,5 @@
 .container {
 	max-width: px($maxWidthContainer);
-	padding: 0px px($containerPadding);
-	margin: 0 auto;
+	padding: px(0) px($containerPadding);
+	margin: px(0) auto;
 }
