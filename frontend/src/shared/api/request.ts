@@ -14,11 +14,11 @@ export const request = async <T>({
 	query = {},
 }: requestProps): Promise<T> => {
 	const endpoint = `/api/${url}`;
+	const delay = 0;
 
 	const queryString = Object.keys(query).length
 		? `?${new URLSearchParams(query as Record<string, string>).toString()}`
 		: '';
-
 	const response = await fetch(endpoint + queryString, {
 		method,
 		body: method !== 'GET' && Object.keys(data).length ? JSON.stringify(data) : undefined,
@@ -31,5 +31,7 @@ export const request = async <T>({
 		throw new Error(`HTTP error! Status: ${response.status}`);
 	}
 
-	return (await response.json()) as T;
+	const result = (await response.json()) as T;
+
+	return await new Promise((resolve) => setTimeout(() => resolve(result), delay));
 };
