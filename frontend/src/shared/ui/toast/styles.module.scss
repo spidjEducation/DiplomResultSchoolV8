@@ -1,0 +1,49 @@
+.toast {
+	position: fixed;
+	width: rem(290);
+	top: rem(80);
+	right: rem(20);
+	background: $color-bg-toast;
+	padding: rem(20) rem(15);
+	border-radius: rem(10);
+	border: rem(1) solid;
+	color: $color-toast;
+	opacity: 0;
+	visibility: hidden;
+	translate: rem(50) 0;
+	transition: all 0.3s ease 0s;
+
+	&:global(.success) {
+		background: $color-success;
+		border: rem(1) solid $color-success-border;
+	}
+
+	&:global(.error) {
+		background: $color-error;
+		border: rem(1) solid $color-error-border;
+	}
+
+	&:global(.warning) {
+		background: $color-warning;
+		border: rem(1) solid $color-warning-border;
+	}
+
+	&:global(.active) {
+		opacity: 1;
+		visibility: visible;
+		translate: 0 0;
+	}
+}
+
+.close {
+	position: absolute;
+	top: rem(10);
+	right: rem(10);
+	display: inline-flex;
+}
+
+.icon {
+	color: $color-logo;
+	width: rem(10);
+	height: rem(10);
+}

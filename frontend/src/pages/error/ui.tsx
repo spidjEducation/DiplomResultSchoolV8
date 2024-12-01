@@ -1,9 +1,10 @@
 import { Container } from "shared/ui/container";
+import { PageHeader } from "shared/ui/pageHeader";
 
 export const ErrorPage = () => {
 	return (
 		<Container>
-			<div>Ошибка</div>
+			<PageHeader title="Упс...Что-то пошло не так :(" />
 		</Container>
 	);
 };

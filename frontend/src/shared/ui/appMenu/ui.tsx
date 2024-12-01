@@ -13,17 +13,17 @@ export const AppMenu = () => {
                     </NavLink>
                 </li>
                 <li className={classes.item}>
-                    <NavLink className={classes.link} to={path.account()}>
+                    <NavLink className={classes.link} to={path.account.root()}>
                         Счета
                     </NavLink>
                 </li>
                 <li className={classes.item}>
-                    <NavLink className={classes.link} to={path.operation()}>
+                    <NavLink className={classes.link} to={path.operation.root()}>
                         Операции
                     </NavLink>
                 </li>
                 <li className={classes.item}>
-                    <NavLink className={classes.link} to={path.category()}>
+                    <NavLink className={classes.link} to={path.category.root()}>
                         Категории
                     </NavLink>
                 </li>
