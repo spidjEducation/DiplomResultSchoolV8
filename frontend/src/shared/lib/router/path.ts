@@ -17,6 +17,9 @@ export const path = {
 	page404() {
 		return path.root.concat('404');
 	},
+	history() {
+		return path.root.concat('history');
+	},
 	others() {
 		return path.root.concat('*');
 	},

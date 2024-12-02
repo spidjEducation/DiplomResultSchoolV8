@@ -1,22 +1,16 @@
+import { OperationsList } from "features/operation";
 import { Container } from "shared/ui/container";
+import { AccountsMain } from "widgets/accountsMain";
+import { CategoriesMain } from "widgets/categoriesMain";
+import { OperationsMain } from "widgets/operationsMain";
 import classes from './styles.module.scss';
-
-const AccountsMain = () => {
-    return (<div>Список счетов</div>)
-}
-const CategoriesMain = () => {
-    return (<div>Список категорий</div>)
-}
-const OperationsMain = () => {
-    return (<div>Список операций</div>)
-}
 
 export const MainPage = () => {
     return (
         <Container className={classes.main}>
             <div className={classes.content}>
                 <AccountsMain />
-                <OperationsMain />
+                <OperationsMain renderOperationList={(operations) => <OperationsList operations={operations} />} />
                 <CategoriesMain />
             </div>
         </Container>

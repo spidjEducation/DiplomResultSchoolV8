@@ -7,7 +7,7 @@
 	right: 0;
 	bottom: 0;
 	z-index: 1000;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: $screen-dimming;
 	cursor: pointer;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -28,7 +28,7 @@
 	margin: px(50) auto;
 	padding: px(30) px(50);
 	vertical-align: middle;
-	background-color: $green-white;
+	background-color: $color-bg-modal;
 	border-radius: px(5);
 	cursor: default;
 	text-align: left;

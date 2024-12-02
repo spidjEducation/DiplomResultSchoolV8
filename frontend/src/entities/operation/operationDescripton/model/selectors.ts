@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { OperationDescriptionState } from './types';
 
-const selectBase = (state: RootState): OperationDescriptionState => state.operationData;
+const selectBase = (state: RootState): OperationDescriptionState => state.operationDescription;
 
 export const selectOperationDescription = createSelector(selectBase, (state) => state.operation);
 

@@ -1,0 +1,33 @@
+.category {
+	position: relative;
+	border-radius: rem(5);
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background: $color-hover;
+		}
+	}
+}
+
+.main {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: rem(15);
+	padding: rem(10);
+}
+
+.info {
+	display: grid;
+	align-items: center;
+	gap: rem(3);
+	padding: 0px rem(50) 0px 0px;
+}
+
+.name {
+}
+
+.type {
+	font-size: rem(14);
+	color: $color-dim-text;
+}

@@ -3,4 +3,5 @@ export enum Icons {
 	exit = 'exit',
 	cross = 'cross',
 	back = 'back',
+	edit = 'edit',
 }

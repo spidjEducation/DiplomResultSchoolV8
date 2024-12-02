@@ -1,0 +1,54 @@
+.operation {
+	position: relative;
+	border-radius: rem(5);
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background: $color-hover;
+		}
+	}
+}
+
+.main {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: rem(30);
+	padding: rem(10);
+	color: $color-text;
+}
+
+.info {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	gap: rem(3) rem(10);
+	padding: 0px rem(50) 0px 0px;
+	color: $color-text;
+}
+
+.amount {
+	font-size: rem(24);
+	font-weight: 500;
+	transition: all 0.3s ease 0s;
+	color: $color-text;
+
+	&:global(.income) {
+		color: $color-success;
+		&::before {
+			content: '+';
+		}
+	}
+
+	&:global(.expense) {
+		color: $color-error;
+		&::before {
+			content: '-';
+		}
+	}
+}
+
+.datetime {
+	font-size: rem(14);
+	color: $color-dim-text;
+}
