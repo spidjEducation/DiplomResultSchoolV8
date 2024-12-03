@@ -1,6 +1,7 @@
 import { SVGProps } from 'react';
 import { Icons } from 'shared/types';
 import Back from './svg/arrow-back.svg?react';
+import Cart from './svg/cart.svg?react';
 import Cross from './svg/cross.svg?react';
 import Edit from './svg/edit.svg?react';
 import Exit from './svg/exit.svg?react';
@@ -23,6 +24,8 @@ export const Icon = ({ name, className, size = 36, ...rest }: IconProps) => {
 			return <Back className={className} width={size} height={size} {...rest} />;
 		case Icons.edit:
 			return <Edit className={className} width={size} height={size} {...rest} />;
+		case Icons.cart:
+			return <Cart className={className} width={size} height={size} {...rest} />;
 		default:
 			return null;
 	}

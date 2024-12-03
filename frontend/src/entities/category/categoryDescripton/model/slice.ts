@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCategoryDescription } from './thunk';
+import { fetchCategoryDescription, fetchDeleteCategory } from './thunk';
 import { CategoryDescriptionState } from './types';
 
 const initialState: CategoryDescriptionState = {
@@ -29,6 +29,19 @@ const categoryDescriptionSlice = createSlice({
 				state.error = null;
 			})
 			.addCase(fetchCategoryDescription.rejected, (state, { payload }) => {
+				state.loading = false;
+				state.error = payload?.message ?? null;
+			})
+
+			.addCase(fetchDeleteCategory.pending, (state) => {
+				state.loading = true;
+				state.error = null;
+			})
+			.addCase(fetchDeleteCategory.fulfilled, (state) => {
+				state.loading = false;
+				state.error = null;
+			})
+			.addCase(fetchDeleteCategory.rejected, (state, { payload }) => {
 				state.loading = false;
 				state.error = payload?.message ?? null;
 			}),

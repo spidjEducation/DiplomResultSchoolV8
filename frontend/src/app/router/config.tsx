@@ -7,12 +7,14 @@ import { CategoryPage } from 'pages/category';
 import { CategoryCreatePage } from 'pages/categoryCreate';
 import { CategoryEditPage } from 'pages/categoryEdit';
 import { ErrorPage } from 'pages/error';
+import { HistoryPage } from 'pages/history';
 import { LoginPage } from 'pages/login';
 import { MainPage } from 'pages/main';
 import { OperationPage } from 'pages/operation';
 import { OperationCreatePage } from 'pages/operationCreate';
-import { Page404 } from 'pages/page404/page404';
+import { Page404 } from 'pages/page404/ui';
 import { RegisterPage } from 'pages/register';
+import { UserEditPage } from 'pages/userEdit';
 import { ReactNode } from 'react';
 import { createBrowserRouter, Navigate, useLocation } from 'react-router-dom';
 import { path } from 'shared/lib/router';
@@ -53,6 +55,10 @@ export const routerConfig = createBrowserRouter([
 			{
 				index: true,
 				element: <MainPage />,
+			},
+			{
+				path: path.settings(),
+				element: <UserEditPage />,
 			},
 			{
 				path: path.account.root(),
@@ -98,6 +104,10 @@ export const routerConfig = createBrowserRouter([
 			{
 				path: path.operation.create(),
 				element: <OperationCreatePage />,
+			},
+			{
+				path: path.history(),
+				element: <HistoryPage />,
 			},
 			{
 				path: path.others(),

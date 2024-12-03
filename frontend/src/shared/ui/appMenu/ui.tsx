@@ -14,17 +14,17 @@ export const AppMenu = () => {
                 </li>
                 <li className={classes.item}>
                     <NavLink className={classes.link} to={path.account.root()}>
-                        Счета
+                        Добавить счет
                     </NavLink>
                 </li>
                 <li className={classes.item}>
                     <NavLink className={classes.link} to={path.operation.root()}>
-                        Операции
+                        Добавить операцию
                     </NavLink>
                 </li>
                 <li className={classes.item}>
                     <NavLink className={classes.link} to={path.category.root()}>
-                        Категории
+                        Добавить категорию
                     </NavLink>
                 </li>
                 <li className={classes.item}>
