@@ -1,16 +1,16 @@
 .label {
 	color: $color-form-label;
-	font-weight: px(400);
+	font-weight: 400;
 	font-size: rem(14);
 	display: inline-block;
-	margin: px(0) px(0) rem(5) px(0);
+	margin: 0 0 rem(5) 0;
 }
 
 .input {
 	display: block;
 	width: 100%;
 	font-size: rem($font-size-base);
-	line-height: prc(1.25);
+	line-height: 1.25;
 	padding: rem(10) rem(12);
 	height: rem(38);
 	color: $color-text;

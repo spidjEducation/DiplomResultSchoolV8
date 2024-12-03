@@ -9,4 +9,8 @@ export const selectOperationDescriptionId = createSelector(selectBase, (state) =
 
 export const selectOperationDescriptionLoading = createSelector(selectBase, (state) => state.loading);
 
+export const selectOperationDataCreating = createSelector(selectBase, (state) => state.creating);
+
+export const selectOperationDataDeleting = createSelector(selectBase, (state) => state.deleting);
+
 export const selectOperationDescriptionError = createSelector(selectBase, (state) => state.error);

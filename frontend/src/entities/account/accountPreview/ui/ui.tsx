@@ -1,6 +1,8 @@
+import { format } from 'date-fns';
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
 import { AccountType } from 'shared/api/account';
+import { DATETIME_FORMAT } from 'shared/constant';
 import { path } from 'shared/lib/router';
 import { Icons } from 'shared/types';
 import { Block } from 'shared/ui/block';
@@ -20,7 +22,7 @@ export const AccountView = ({ account, deleteSlot }: AccountViewProps) => {
 			<dl>
 				<div>
 					<dt>Дата:</dt>
-					<dd>{account.createdAt ? account.createdAt : ''}</dd>
+					<dd>{account.createdAt ? format(account.createdAt, DATETIME_FORMAT) : ''}</dd>
 				</div>
 				<div>
 					<dt>Название:</dt>

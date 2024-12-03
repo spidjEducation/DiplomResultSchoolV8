@@ -6,7 +6,7 @@
 	align-items: center;
 	text-align: center;
 	font-size: rem(16);
-	line-height: prc(1);
+	line-height: 1;
 	padding: rem(8) rem(22);
 	height: rem(40);
 	background: $color-button;
@@ -21,7 +21,7 @@
 	}
 
 	&:focus {
-		box-shadow: px(0) px(0) px(0) px(1) $color-focus;
+		box-shadow: 0 0 0 rem(1) $color-focus;
 	}
 
 	&:disabled {

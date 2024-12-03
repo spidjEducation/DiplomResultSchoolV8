@@ -13,13 +13,13 @@
 .link {
 	position: relative;
 	display: inline-flex;
-	padding: rem(15) px(0);
+	padding: rem(15) 0;
 	color: $color-header;
 	&::before {
 		content: '';
 		position: absolute;
-		bottom: px(0);
-		left: px(0);
+		bottom: 0;
+		left: 0;
 		width: 100%;
 		height: rem(2);
 		background: $color-header;

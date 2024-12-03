@@ -1,6 +1,8 @@
+import { format } from "date-fns";
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { CategoryType } from "shared/api/category";
+import { DATETIME_FORMAT } from 'shared/constant';
 import { getCategoryTypeName } from "shared/lib/category";
 import { path } from "shared/lib/router";
 import { Icons } from "shared/types";
@@ -20,7 +22,7 @@ export const CategoryView = ({ category, deleteSlot }: CategoryViewPropts) => {
             <dl>
                 <div>
                     <dt>Дата:</dt>
-                    <dd>{category.createdAt ? category.createdAt : ''}</dd>
+                    <dd>{category.createdAt ? format(category.createdAt, DATETIME_FORMAT) : ''}</dd>
                 </div>
                 <div>
                     <dt>Название:</dt>

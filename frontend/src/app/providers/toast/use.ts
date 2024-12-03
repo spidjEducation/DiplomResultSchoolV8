@@ -16,7 +16,7 @@ export const useToastState = (): ToastState => {
 	const context = useContext(ToastStateContext);
 
 	if (context === null) {
-		throw new Error('useToast может использоваться только внутри ToastFunctions');
+		throw new Error('useToastState может использоваться только внутри ToastState');
 	}
 
 	return context;

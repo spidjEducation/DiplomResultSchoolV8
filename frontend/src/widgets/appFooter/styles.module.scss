@@ -2,8 +2,8 @@
 	background: $color-bg-footer;
 	color: $color-footer;
 	border-top: 1px solid $color-border;
-	box-shadow: px(0) px(0) px(10) px(4) $color-shadow;
-	padding: px(30) px(0);
+	box-shadow: 0 0 rem(10) rem(4) $color-shadow;
+	padding: rem(30) rem(0);
 }
 
 .container {

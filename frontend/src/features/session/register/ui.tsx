@@ -13,9 +13,9 @@ import { Button } from 'shared/ui/formButton';
 import { Input } from 'shared/ui/formInput';
 import classes from './styles.module.scss';
 
-export const registerFormRules = yup.object().shape({
-	login: yup.string().required().min(3).max(30),
-	password: yup.string().required().min(3).max(30),
+const registerFormRules = yup.object().shape({
+	login: yup.string().required().min(5).max(30),
+	password: yup.string().required().min(8).max(30),
 	passcheck: yup
 		.string()
 		.required()

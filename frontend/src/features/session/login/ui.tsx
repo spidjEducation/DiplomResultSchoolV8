@@ -14,8 +14,8 @@ import classes from './styles.module.scss';
 type RequestData = Record<string, string | number | boolean>;
 
 const loginFormRules = yup.object().shape({
-    login: yup.string().required().min(3).max(30),
-    password: yup.string().required().min(3).max(30)
+    login: yup.string().required().min(5).max(30),
+    password: yup.string().required().min(8).max(30)
 });
 
 export const LoginForm = () => {
