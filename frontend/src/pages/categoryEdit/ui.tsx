@@ -1,9 +1,9 @@
 import { Container } from "shared/ui/container";
 
-export const CategoryPage = () => {
+export const CategoryEditPage = () => {
     return (
         <Container>
-            <div>Информация о категориях</div>
+            <div>Редактирование категориях</div>
         </Container>
     );
 };

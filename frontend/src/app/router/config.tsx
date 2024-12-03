@@ -1,11 +1,16 @@
 import { AuthLayout, MainLayout } from 'app/layouts';
 import { useAuth } from 'app/providers/auth';
 import { AccountPage } from 'pages/account';
-import { CategotyPage } from 'pages/category';
+import { AccountCreatePage } from 'pages/accountCreate';
+import { AccountEditPage } from 'pages/accountEdit';
+import { CategoryPage } from 'pages/category';
+import { CategoryCreatePage } from 'pages/categoryCreate';
+import { CategoryEditPage } from 'pages/categoryEdit';
 import { ErrorPage } from 'pages/error';
 import { LoginPage } from 'pages/login';
 import { MainPage } from 'pages/main';
 import { OperationPage } from 'pages/operation';
+import { OperationCreatePage } from 'pages/operationCreate';
 import { Page404 } from 'pages/page404/page404';
 import { RegisterPage } from 'pages/register';
 import { ReactNode } from 'react';
@@ -51,15 +56,48 @@ export const routerConfig = createBrowserRouter([
 			},
 			{
 				path: path.account.root(),
+				element: <Navigate to={path.account.create()} replace />,
+			},
+			{
+				path: path.account.id(),
 				element: <AccountPage />,
 			},
 			{
-				path: path.category.root(),
-				element: <CategotyPage />,
+				path: path.account.create(),
+				element: <AccountCreatePage />,
 			},
 			{
+				path: path.account.edit(),
+				element: <AccountEditPage />,
+			},
+			{
+				path: path.category.root(),
+				element: <Navigate to={path.category.create()} replace />,
+			},
+			{
+				path: path.category.id(),
+				element: <CategoryPage />,
+			},
+			{
+				path: path.category.create(),
+				element: <CategoryCreatePage />,
+			},
+			{
+				path: path.category.edit(),
+				element: <CategoryEditPage />,
+			},
+
+			{
 				path: path.operation.root(),
+				element: <Navigate to={path.operation.create()} replace />,
+			},
+			{
+				path: path.operation.id(),
 				element: <OperationPage />,
+			},
+			{
+				path: path.operation.create(),
+				element: <OperationCreatePage />,
 			},
 			{
 				path: path.others(),
