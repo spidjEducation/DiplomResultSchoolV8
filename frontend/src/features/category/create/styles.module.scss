@@ -1,0 +1,14 @@
+.block {
+	max-width: rem(500);
+}
+
+.form {
+	display: grid;
+	gap: rem(20);
+}
+
+.radiobuttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(30);
+}

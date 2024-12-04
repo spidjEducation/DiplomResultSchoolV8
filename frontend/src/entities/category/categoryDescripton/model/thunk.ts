@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { CategoryType, deleteCategory, getCategory } from 'shared/api/category';
+import { RequestData } from 'shared/api';
+import { CategoryType, createCategory, deleteCategory, editCategory, getCategory } from 'shared/api/category';
 import { ErrorType, ID } from 'shared/types';
 
 export const fetchCategoryDescription = createAsyncThunk<CategoryType, ID, { rejectValue: ErrorType }>(
@@ -39,3 +40,42 @@ export const fetchDeleteCategory = createAsyncThunk<ID, ID, { rejectValue: Error
 		}
 	},
 );
+
+export const fetchCreateCategory = createAsyncThunk<CategoryType, RequestData, { rejectValue: ErrorType }>(
+	'category/fetchCreateCategory',
+	async (submittedData, { rejectWithValue }) => {
+		try {
+			const { category, error } = await createCategory(submittedData);
+
+			if (!category) {
+				throw new Error(error as string);
+			}
+
+			return category;
+		} catch (error: unknown) {
+			const knownError = error as ErrorType;
+
+			return rejectWithValue(knownError);
+		}
+	},
+);
+
+export const fetchEditCategory = createAsyncThunk<
+	CategoryType,
+	{ id: ID; submittedData: RequestData },
+	{ rejectValue: ErrorType }
+>('category/fetchEditCategory', async ({ id, submittedData }, { rejectWithValue }) => {
+	try {
+		const { category, error } = await editCategory(id, submittedData);
+
+		if (!category) {
+			throw new Error(error as string);
+		}
+
+		return category;
+	} catch (error: unknown) {
+		const knownError = error as ErrorType;
+
+		return rejectWithValue(knownError);
+	}
+});

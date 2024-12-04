@@ -1,9 +1,12 @@
+import { CategoryEditForm } from "features/category/edit";
 import { Container } from "shared/ui/container";
+import { PageHeader } from "shared/ui/pageHeader";
 
 export const CategoryEditPage = () => {
     return (
         <Container>
-            <div>Редактирование категориях</div>
+            <PageHeader title="Редактирование категории" />
+            <CategoryEditForm />
         </Container>
     );
 };

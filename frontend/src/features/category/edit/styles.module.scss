@@ -1,0 +1,15 @@
+.block {
+	max-width: rem(450);
+	align-items: center;
+}
+
+.form {
+	display: grid;
+	gap: rem(20);
+}
+
+.radiobuttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(30);
+}

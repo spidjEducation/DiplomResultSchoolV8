@@ -12,7 +12,6 @@ interface FormProps extends PropsWithChildren {
 export const Form = ({ className, defaultValues, resolver, onSubmit, children, ...rest }: FormProps) => {
 	const methods = useForm({ defaultValues, resolver });
 	const { handleSubmit } = methods;
-
 	return (
 		<FormProvider {...{ ...methods, onSubmit }}>
 			<form className={className} onSubmit={handleSubmit(onSubmit)} {...rest}>
@@ -20,4 +19,4 @@ export const Form = ({ className, defaultValues, resolver, onSubmit, children, .
 			</form>
 		</FormProvider>
 	);
-};
+}; 

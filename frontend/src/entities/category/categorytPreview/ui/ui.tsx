@@ -18,7 +18,7 @@ interface CategoryViewPropts {
 export const CategoryView = ({ category, deleteSlot }: CategoryViewPropts) => {
     return (
         <Block className={classes.view}>
-            <h4>Категория №{category.id}</h4>
+            <h4>Категория № {category.id}</h4>
             <dl>
                 <div>
                     <dt>Дата:</dt>

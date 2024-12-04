@@ -1,9 +1,12 @@
+import { CategoryCreateForm } from "features/category/create";
 import { Container } from "shared/ui/container";
+import { PageHeader } from "shared/ui/pageHeader";
 
 export const CategoryCreatePage = () => {
     return (
         <Container>
-            <div>Создание категории</div>
+            <PageHeader title="Создание категории" />
+            <CategoryCreateForm />
         </Container>
     );
 };

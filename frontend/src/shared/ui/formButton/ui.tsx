@@ -20,6 +20,7 @@ export const Button = ({
 	loading,
 	...rest
 }: ButtonProps) => {
+
 	const { reset, handleSubmit, onSubmit } = useFormContext() as UseFormReturn & {
 		onSubmit: (submittedData: RequestData) => void;
 	};
