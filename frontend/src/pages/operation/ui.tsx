@@ -1,9 +1,12 @@
 import { Container } from "shared/ui/container";
+import { PageHeader } from "shared/ui/pageHeader";
+import { Operation } from "widgets/operation";
 
 export const OperationPage = () => {
     return (
         <Container>
-            <div>Информация о операциях</div>
+            <PageHeader title="Информация об операции" />
+            <Operation />
         </Container>
     );
 };
