@@ -1,0 +1,16 @@
+.label {
+	color: $color-dim-text;
+	font-weight: 400;
+	font-size: rem(14);
+	display: inline-block;
+	margin: 0 0 rem(5) 0;
+}
+
+.error {
+	color: $color-error;
+	font-style: italic;
+	font-size: rem(12);
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}

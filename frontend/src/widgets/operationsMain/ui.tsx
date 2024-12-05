@@ -26,7 +26,7 @@ export const OperationsMain = ({ renderOperationList }: OperationsMainProps) => 
 
 	return (
 		<Block className={classes.main}>
-			<h4 className={classes.title}>Недавние операции</h4>
+			<h4 className={classes.title}>Список операции</h4>
 			{renderOperationList(operations)}
 		</Block>
 	);
