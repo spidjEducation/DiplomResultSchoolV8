@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchAccountDescription } from './thunk';
+import { fetchAccountDescription, fetchCreateAccount, fetchDeleteAccount, fetchEditAccount } from './thunk';
 import { AccountDescriptionState } from './types';
 
 const initialState: AccountDescriptionState = {
@@ -30,6 +30,45 @@ export const accountDescriptionSlice = createSlice({
 				state.error = null;
 			})
 			.addCase(fetchAccountDescription.rejected, (state, { payload }) => {
+				state.loading = false;
+				state.error = payload?.message ?? null;
+			})
+			.addCase(fetchDeleteAccount.pending, (state) => {
+				state.loading = true;
+				state.error = null;
+			})
+			.addCase(fetchDeleteAccount.fulfilled, (state) => {
+				state.loading = false;
+				state.error = null;
+			})
+			.addCase(fetchDeleteAccount.rejected, (state, { payload }) => {
+				state.loading = false;
+				state.error = payload?.message ?? null;
+			})
+			.addCase(fetchCreateAccount.pending, (state) => {
+				state.loading = true;
+				state.error = null;
+			})
+			.addCase(fetchCreateAccount.fulfilled, (state, { payload }) => {
+				state.account = payload;
+				state.loading = false;
+				state.error = null;
+			})
+			.addCase(fetchCreateAccount.rejected, (state, { payload }) => {
+				state.loading = false;
+				state.error = payload?.message ?? null;
+			})
+
+			.addCase(fetchEditAccount.pending, (state) => {
+				state.loading = true;
+				state.error = null;
+			})
+			.addCase(fetchEditAccount.fulfilled, (state, { payload }) => {
+				state.account = payload;
+				state.loading = false;
+				state.error = null;
+			})
+			.addCase(fetchEditAccount.rejected, (state, { payload }) => {
 				state.loading = false;
 				state.error = payload?.message ?? null;
 			}),
